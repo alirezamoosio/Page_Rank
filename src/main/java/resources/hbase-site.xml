@@ -2,6 +2,10 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
     <property>
+        <name>hbase.rootdir</name>
+        <value>hdfs://master-node:9000/hbase</value>
+    </property>
+    <property>
         <name>hbase.zookeeper.quorum</name>
         <value>master-node</value>
     </property>
