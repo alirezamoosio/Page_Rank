@@ -79,10 +79,11 @@ public class RankCalculator {
                             resultList.add(new Tuple2<>(link.getUrl(), 1));
                         }
                 }
+                return resultList.iterator();
             } catch (NullPointerException e) {
 //                System.out.println(key._1);
+                return null;
             }
-            return resultList.iterator();
         });
 
         result = mapped.reduceByKey((value1, value2) -> value1 + value2);
@@ -98,6 +99,7 @@ public class RankCalculator {
             JavaPairRDD<ImmutableBytesWritable, Put> hbasePuts = toWrite.mapToPair(pair -> {
                 Put put = new Put(Bytes.toBytes(pair._1));
                 put.addColumn(familyName.getBytes(), pageRankName.getBytes(), Bytes.toBytes(pair._2));
+                System.out.println(pair._2);
                 return new Tuple2<>(new ImmutableBytesWritable(), put);
             });
             hbasePuts.saveAsNewAPIHadoopDataset(jobConfig.getConfiguration());
