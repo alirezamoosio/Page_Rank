@@ -39,13 +39,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="60" />
+          <entry key="java" value="79" />
           <entry key="xml" value="69" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="60" />
+          <entry key="JAVA" value="79" />
           <entry key="XML" value="69" />
         </counts>
       </usages-collector>
@@ -84,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/nimbo/rank/RankCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="57" column="56" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
+            <state relative-caret-position="525">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,7 +142,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/nimbo/searchengine/crawler/UrlHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -173,9 +173,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ir/nimbo/rank/Link.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/nimbo/searchengine/crawler/Link/Link.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ir/nimbo/rank/RankCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/nimbo/searchengine/crawler/Link.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/nimbo/searchengine/crawler/UrlHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/nimbo/rank/RankCalculator.java" />
       </list>
     </option>
   </component>
@@ -274,7 +274,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534401423068" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534402413417" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/ir/nimbo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -328,12 +328,12 @@
       <option name="presentableId" value="Default" />
       <updated>1534346827698</updated>
       <workItem from="1534346832287" duration="2122000" />
-      <workItem from="1534393546409" duration="7418000" />
+      <workItem from="1534393546409" duration="8139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10152000" />
+    <option name="totallyTimeSpent" value="10873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -496,16 +496,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/core-site.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/nimbo/rank/RankCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="57" column="56" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ir/nimbo/searchengine/crawler/Link.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -520,6 +510,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/nimbo/rank/RankCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
