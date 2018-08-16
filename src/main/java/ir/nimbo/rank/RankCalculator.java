@@ -53,10 +53,14 @@ public class RankCalculator {
     JavaPairRDD<String, ArrayList<Link>> getFromHBase() {
         JavaPairRDD<ImmutableBytesWritable, Result> read = sparkContext.newAPIHadoopRDD(hbaseConf, TableInputFormat.class, ImmutableBytesWritable.class, Result.class);
         return read.mapToPair(pair -> {
-            String key = Bytes.toString(pair._1.get());
-            byte[] outLinksByte = pair._2.getColumnLatestCell(familyName.getBytes(), outLinksName.getBytes()).getValue();
-            ArrayList<Link> outLinks = (ArrayList<Link>) SerializationUtils.deserialize(outLinksByte);
-            return new Tuple2<>(key, outLinks);
+            try {
+                String key = Bytes.toString(pair._1.get());
+                byte[] outLinksByte = pair._2.getColumnLatestCell(familyName.getBytes(), outLinksName.getBytes()).getValue();
+                ArrayList<Link> outLinks = (ArrayList<Link>) SerializationUtils.deserialize(outLinksByte);
+                return new Tuple2<>(key, outLinks);
+            }catch (NullPointerException e){
+                return null;
+            }
         });
     }
 
