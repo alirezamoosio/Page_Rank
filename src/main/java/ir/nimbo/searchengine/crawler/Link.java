@@ -1,6 +1,7 @@
 package ir.nimbo.searchengine.crawler;
+import java.io.Serializable;
 
-public class Link {
+public class Link implements Serializable {
     private String anchorLink;
     private String url;
 

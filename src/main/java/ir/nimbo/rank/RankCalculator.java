@@ -1,5 +1,6 @@
 package ir.nimbo.rank;
 
+import ir.nimbo.searchengine.crawler.Link;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.client.Put;
