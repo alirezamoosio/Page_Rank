@@ -5,6 +5,6 @@ package ir.nimbo.rank;
  */
 public class App {
     public static void main(String[] args) {
-        new RankCalculator("Rank", "spark://master-node:7077").calculate();
+        new RankCalculator("rank", "spark://master-node:7077").calculate();
     }
 }

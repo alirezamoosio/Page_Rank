@@ -28,10 +28,10 @@ public class RankCalculator {
     private static String pageRankName = "pageRank";
     private Configuration hbaseConf;
     private JavaSparkContext sparkContext;
-    private static Logger logger = Logger.getLogger("error");
+//    private static Logger logger = Logger.getLogger("error");
 
     RankCalculator(String appName, String master) {
-        String[] jars = {"/home/rank/target/Page_Rank-1.0-SNAPSHOT-jar-with-dependencies.jar"};
+        String[] jars = {"/home/rank/target/rank-1.0-SNAPSHOT-jar-with-dependencies.jar"};
         SparkConf sparkConf = new SparkConf().setAppName(appName).setMaster(master).setJars(jars);
         sparkContext = new JavaSparkContext(sparkConf);
         hbaseConf = HBaseConfiguration.create();
@@ -75,7 +75,7 @@ public class RankCalculator {
             } catch (NullPointerException e) {
 //                System.out.println(key._1);
             }
-            return resultList;
+            return resultList.iterator();
         });
 
         result = mapped.reduceByKey((value1, value2) -> value1 + value2);
