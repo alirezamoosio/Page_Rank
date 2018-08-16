@@ -58,8 +58,10 @@ public class RankCalculator {
                 key = Bytes.toString(pair._1.get());
                 byte[] outLinksByte = pair._2.getColumnLatestCell(familyName.getBytes(), outLinksName.getBytes()).getValue();
                 ArrayList<Link> outLinks = (ArrayList<Link>) SerializationUtils.deserialize(outLinksByte);
-                return new Tuple2<>(key, outLinks);
-            }catch (NullPointerException e){
+                if (!outLinks.isEmpty() && !key.isEmpty())
+                    return new Tuple2<>(key, outLinks);
+                else return null;
+            } catch (NullPointerException e) {
                 System.out.println(key);
                 return null;
             }
@@ -79,11 +81,10 @@ public class RankCalculator {
                             resultList.add(new Tuple2<>(link.getUrl(), 1));
                         }
                 }
-                return resultList.iterator();
             } catch (NullPointerException e) {
 //                System.out.println(key._1);
-                return null;
             }
+            return resultList.iterator();
         });
 
         result = mapped.reduceByKey((value1, value2) -> value1 + value2);
