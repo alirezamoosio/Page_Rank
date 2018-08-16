@@ -1,4 +1,4 @@
-package ir.nimbo.rank;
+package ir.nimbo.searchengine.crawler;
 
 public class Link {
     private String anchorLink;
