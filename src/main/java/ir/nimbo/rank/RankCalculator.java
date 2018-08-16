@@ -32,7 +32,7 @@ public class RankCalculator {
 
     RankCalculator(String appName, String master) {
         String[] jars = {"/home/rank/target/rank-1.0-SNAPSHOT-jar-with-dependencies.jar"};
-        SparkConf sparkConf = new SparkConf().setAppName(appName).setMaster(master).setJars(jars);
+        SparkConf sparkConf = new SparkConf().setAppName(appName).setMaster(master).setJars(jars).set("spark.shuffle.service.enabled", "false").set("spark.dynamicAllocation.enabled", "false");
         sparkContext = new JavaSparkContext(sparkConf);
         hbaseConf = HBaseConfiguration.create();
         hbaseConf.addResource(getClass().getResource("/hbase-site.xml"));
