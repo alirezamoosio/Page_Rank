@@ -148,10 +148,5 @@
         </configuration>
       </plugin>
     </plugins>
-    <resources>
-      <resource>
-        <directory>src/main/resource</directory>
-      </resource>
-    </resources>
   </build>
 </project>
